@@ -10,11 +10,6 @@ const paymentRoutes = require("./routes/paymentRoutes");
 
 const app = express();
 
-app.get("/test123", (req, res) => {
-  res.json({
-    message: "Render is using the latest code!"
-  });
-});
 
 // connect to mongodb
 connectDB();
@@ -30,6 +25,13 @@ app.use(
   })
 );
 app.use(express.json()); // lets us read req.body in JSON format
+
+app.get("/test123", (req, res) => {
+  res.json({
+    message: "Render is using the latest code!"
+  });
+});
+
 
 // routes
 app.use("/api/auth", authRoutes);
