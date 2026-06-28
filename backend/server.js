@@ -10,6 +10,12 @@ const paymentRoutes = require("./routes/paymentRoutes");
 
 const app = express();
 
+app.get("/test123", (req, res) => {
+  res.json({
+    message: "Render is using the latest code!"
+  });
+});
+
 // connect to mongodb
 connectDB();
 
