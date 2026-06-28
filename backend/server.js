@@ -15,15 +15,17 @@ const app = express();
 connectDB();
 
 // middleware
+
 app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://YOUR-VERCEL-NAME.vercel.app",
+      "https://fresh-kart-mern.vercel.app",
     ],
     credentials: true,
   })
 );
+
 app.use(express.json()); // lets us read req.body in JSON format
 
 app.get("/test123", (req, res) => {
